@@ -1,0 +1,193 @@
+.show-page {
+    padding-top: 40px;
+}
+
+.map-show {
+    margin: 30px 0;
+    .map-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 0;
+        width: 100%;
+        height: 250px;
+
+        #mapid {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+// Map Info
+.leaflet-control {
+    display: none;
+}
+
+.info {
+    @include flex(row, center, flex-start);
+    flex-wrap: wrap;
+
+    &-img,
+    &-detail {
+        flex-basis: 50%;
+        min-width: 290px;
+    }
+
+    &-img {
+        height: 400px;
+
+        img {
+            border-radius: 13px;
+            object-fit: cover;
+            width: 100%;
+            height: 100%; 
+        }
+    }
+
+    &-detail {
+        height: auto;
+
+        h6 {
+            font-size: 0.9rem;
+        }
+
+        padding: 10px;
+        
+        @include responsive($tablet) {
+            padding: 10px 20px;
+        }
+        
+        &--description {
+            margin-bottom: 20px;
+        }
+
+        &--data {
+            @include flex();
+            flex-wrap: wrap;
+
+            &--details,
+            &--services {
+                padding: 10px 0;
+
+                h5 {
+                    margin-bottom: 5px;
+                }
+            }
+
+            &--details {
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+.dashboard {
+    margin-top: 30px;
+
+    &-ctas {
+        @include flex();
+        flex-wrap: wrap;
+        padding: 15px 0;
+        
+        form {
+            display: inline-block;
+        }
+        
+        &--btn {
+            margin: 5px 5px 5px 0;
+        }
+    } 
+}
+
+
+.show-message,
+.review {
+    max-width: 500px;
+
+    textarea {
+        height: 100px;
+    }
+}
+
+.show-message {
+    margin: 50px 0;
+}
+
+.section-title {
+    margin-bottom: 15px;
+}
+
+
+.reviews-wrapper {
+    background: $main-gradient;
+    margin-top: 100px;
+}
+
+.reviews {
+    padding: 50px 10px;
+
+    &-single {
+        max-width: 500px;
+        padding: 10px 20px;
+        border-radius: 13px;
+        margin-bottom: 10px;
+        background: $transparent;
+
+        &--imgName {
+            @include flex($align: center);
+
+            &--avatar {
+                width: 50px;
+                height: 50px;
+                margin-right: 10px;
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    border: 2px solid $dark;
+                }
+            } 
+            
+            &--name {
+                
+                h4 {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        &--body {
+            margin-top: 15px;
+
+            &--review {
+
+                p {
+                    font-size: 0.8rem;
+                }
+            }
+
+            &--date {
+                text-align: right;
+                
+                h6 {
+                    font-size: 0.8rem;
+                }
+
+                .date-format {
+                    font-size: 0.7rem;
+                }
+            }
+        }
+    }
+}
+
+// Need Element for maps
+.latlng {
+    display: none;
+}
+
+

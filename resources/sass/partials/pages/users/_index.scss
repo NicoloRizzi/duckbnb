@@ -1,0 +1,87 @@
+.dashboard {
+    padding: 50px 10px;
+
+    &-nav {
+        list-style: none;
+        margin-bottom: 30px;
+
+        ul {
+            padding: 0;
+        }
+
+        &--link {
+            display: inline;
+            
+            
+            &:first-child {
+                margin-right: 10px;
+            }
+
+        }
+        
+    }
+
+    &-apts {
+        @include flex(column);
+        flex-wrap: wrap;
+        padding: 0;
+
+        &--title {
+            @include flex(row, flex-start, center);
+            margin-bottom: 20px;
+
+            h2 {
+                font-size: 1.1rem;
+                
+                margin-right: 10px;
+
+                @include responsive($tablet) {
+                    font-size: 2rem;
+                }
+            }
+        }
+        
+        &--apt {
+            @include flex($align: center);
+            flex-wrap: wrap;
+            padding: 10px 0;
+
+            // @include responsive($tablet) {
+            //     flex-wrap: wrap;
+            // }
+
+            .card-apt {
+                margin: 20px 8px;
+
+                &--buttons {
+                    @include flex(row, flex-end, center);
+                    font-size: 1.4rem;
+
+                    &-visibility {
+                        
+                        .not-vis {
+                            color: $shadow;
+                        }
+
+                        .vis {
+                            color: $light-accent;
+                        }
+                    }
+
+                    &-delete {
+
+                        button {
+                            color: $dark-accent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.select {
+    color: $main-color;
+}

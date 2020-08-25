@@ -1,0 +1,154 @@
+// Login Icon
+.login-icon {
+    font-size: 1.1rem;
+}
+
+
+.main-nav {
+    @include flex();
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 8vh;
+    background: $light;
+
+    &--hamburger {
+        z-index: 1;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        .line {
+            width: 30px;
+            height: 3px;
+            background: $dark;
+            margin: 5px;
+            transition: transform ease-out .5s;
+
+
+            &.l1.open {
+                transform: translateY(10px) rotateZ(-45deg)
+            }
+
+            &.l2.open {
+                background: transparent;
+            }
+
+            &.l3.open {
+                transform: translateY(-6px) rotateZ(45deg);
+            }
+        }
+
+        @include responsive($desktop) {
+            display: none;
+        }
+    }
+
+    &--links {
+        @include flex(column, flex-start, center);
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        padding-top: 100px;
+        list-style: none;
+        background-color: $light;
+        clip-path: circle(100px at 90% -10%);
+        -webkit-clip-path: circle(100px at 90% -10%);
+        transition: clip-path .7s ease-out;
+        
+        &.open {
+            clip-path: circle(1000px at 90% -10%);
+            -webkit-clip-path: circle(1000px at 90% -10%);
+        }
+        
+        @include responsive($desktop) {
+            @include flex(row, flex-end, center);
+            padding: 0 15px;
+            position: relative;
+            clip-path: none;
+            margin-left: auto;
+            width: 50%;
+            height: 100%;
+        }
+
+        .nav-item {
+            margin-right: 10px;
+        }
+    }
+
+    &--brand {
+        z-index: 1;
+        width: 50%;
+        height: 100%;
+
+        .navbar-brand {
+            min-width: 145px;
+            max-width: 175px;
+            line-height: 8vh;
+            padding: 0 20px;
+        }
+    }
+    
+    .navbar-nav {
+
+        @include responsive($tablet) {
+            @include flex(column, flex-start, center);      
+        }
+
+        @include responsive($desktop) {
+            @include flex(row, flex-end, center);      
+        }
+    
+        .nav-auth-link {
+            background: $main-color;
+            padding: 50px 35px;
+            border-radius: 9px;
+    
+            a:hover {
+                color: $light;
+            }
+    
+            @include responsive($desktop) {
+                padding: 10px;
+            }
+        }
+    
+        .nav-item.dropdown {
+            
+            .nav-item--user {
+                
+                @include responsive($tablet) {
+                    @include flex(row-reverse, center, center);
+                    margin-left: 30px;
+                    
+                }
+                
+                &--avatar {
+                    display: none;
+    
+                    @include responsive($tablet) {
+                        display: block;
+                    }
+    
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        object-fit: cover;
+                        border-radius: 50%;
+                        border: 2px solid $main-color;   
+                    }
+                }
+    
+                &--name {
+                    margin: 0 10px;
+                    color: $main-color;
+                    cursor: default;
+                }
+            }
+        }
+    }
+    
+}

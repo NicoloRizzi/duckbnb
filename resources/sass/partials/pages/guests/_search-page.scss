@@ -1,0 +1,100 @@
+.search {
+    min-height: 100vh;
+
+    &--searching {
+        @include flex(row, center, center);
+        height: 350px;
+        width: 100%;
+        background: $main-gradient;
+
+        .search-bar {
+            transform: translate(0, 0);
+        }
+
+    }
+
+    &--main {
+
+
+        &-sponsor {
+            background: $dark;
+            color: $light;
+            padding: 30px 0;
+            
+            &--sponsored {
+                @include flex(row, space-between);
+                flex-wrap: wrap;
+            }
+        }
+
+        &-filter {
+            background: $light-accent;
+            padding: 30px 20px;
+
+            &--title {
+                @include flex(row, space-between, center);
+
+                button#reset {
+                    margin-left: 10px;
+                }
+            }
+
+            &--ctn {
+                @include flex(row, center, flex-start);
+                flex-wrap: wrap;
+
+                label {
+                    display: block;
+                }
+
+                &--radius,
+                &--rooms,
+                &--beds {
+                    @include flex(column, center, center);
+                    padding: 20px;
+                }
+
+                &--radius {
+                    .form-radius {
+
+                        &--single {
+                            @include flex(column, flex-start, center);
+                            padding: 0 15px;
+                        }
+                    }
+                }
+            }
+
+            &--services {
+
+                .form-service {
+                    @include flex(row, flex-start, center);
+                    overflow-x: auto;
+
+                    @include responsive($tablet) {
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        overflow: visible;
+                    }
+
+                    &--single {
+                        @include flex(column, center, center);
+                        min-width: 165px;
+                        padding: 15px;
+                    }
+                }
+            }
+        }
+
+        &-result {
+            min-height: 360px;
+            padding: 50px 15px;
+        }
+
+        &-result.no-result {
+            height: 400px;
+        }
+    }
+
+
+}

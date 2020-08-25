@@ -1,0 +1,26 @@
+.registration,
+.login {
+    min-height: calc(100vh - 8vh);
+    
+    @include responsive($tablet) {
+        height: calc(100vh - 8vh);
+        padding-top: 40px;
+    }
+}
+
+// Login
+
+.login {
+
+    .form-check {
+        @include flex($align: center);
+    }
+
+    .form-check-input {
+        margin-top: 0;
+    }
+
+    .form-check-label {
+        margin-left: 10px;
+    }
+}

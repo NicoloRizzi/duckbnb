@@ -1,0 +1,78 @@
+.button {
+
+    &-main {
+        @include button($main-color);
+
+        &:hover {
+            color: $main-color;
+            filter: brightness(0.8);
+        }
+    }
+
+    &-light {
+        @include button($light-accent);
+
+        &:hover {
+            color: $light-accent;
+            filter: brightness(0.8);
+        }
+    }
+    &-dark {
+        @include button($dark-accent);
+
+        &:hover {
+            color: $dark-accent;
+            filter: brightness(0.8);
+        }
+    }
+    &-shadow {
+        @include button($shadow);
+        
+        &:hover {
+            color: $shadow;
+            filter: brightness(0.2);
+        }
+    }
+    
+}
+
+.text {
+    &-main {
+        color: $main-color;
+    }
+
+    &-light {
+        color: $light-accent;
+    }
+    &-dark {
+        color: $dark-accent;
+    }
+    &-shadow {
+        color: $shadow;
+    }
+}
+
+.weight {
+    &-light {
+        font-weight: 300;
+    }
+    &-regular {
+        font-weight: 400;
+    }
+    &-bold {
+        font-weight: 500;
+    }
+}
+
+.divider {
+
+    &-gradient {
+        height: 25px;
+        background: $main-gradient;
+    }
+
+    &-dark {
+        height: 25px;
+        background: $dark;
+    }
+}

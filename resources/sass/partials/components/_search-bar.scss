@@ -1,0 +1,63 @@
+.search-bar {
+    min-width: 250px;
+    max-width: 400px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include responsive($tablet) {
+        min-width: 350px;
+    }
+
+    &--act {
+        position: relative;
+
+        &--btnSubmit {
+            position: absolute;
+            top: 10px;
+            left: 14px;
+            background: transparent;
+            border: none;
+            color: $shadow;
+        }
+    }
+
+}
+
+// Algolia input
+.ap-input {
+    padding-left: 45px;
+    border: none;
+    border-radius: 30px;    
+    background: rgb(255 255 255 / 86%);
+    font-size: 0.8rem;
+
+    &:focus {
+        border: 1px solid $main-color;
+    }
+
+}
+
+.ap-input.form {
+    background: rgb(236 236 236 / 86%);
+    border-radius: 3px;
+    padding-left: 15px;
+}
+
+.ap-input-icon {
+
+    svg {
+        width: 12px;
+    }
+}
+                    
+
+// Algolia suggestion dropdown
+.ap-footer {
+    display: none;
+}
+
+.ap-dropdown-menu {
+    border-radius: 13px;
+}

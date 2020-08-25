@@ -1,0 +1,43 @@
+.stats {
+    padding: 50px 0;
+
+    &-tot {
+        @include flex($just: space-around);
+        flex-wrap: wrap;
+        color: $light;
+        padding: 50px 0;
+        margin: 20px 0;
+        background: $light-accent;
+
+        &--ctn {
+            @include flex(column, center, center); 
+            width: 250px;
+            height: 80px;
+            border: 1px solid $light;
+            border-radius: 13px;
+            margin: 10px 0;
+        }
+    }
+
+    &-graphs {
+        @include flex(row, center, center);
+        flex-wrap: wrap;
+        // padding: 30px;
+
+        .chart-container {
+            position: relative;
+            margin: auto;
+            width: 90vw;
+            height: 60vh;
+        
+            @include responsive($tablet) {
+                justify-content: space-around;
+                width: 30vw;
+                height: 80vh;
+            }
+        }
+    }
+}
+
+  
+

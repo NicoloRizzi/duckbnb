@@ -1,0 +1,22 @@
+.jumbotron {
+    height: 92vh;
+    width: 100%;
+    margin: 0;
+    background-image: url('img/home/jumbo-img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 0;
+}
+
+.sponsor-section {
+    min-height: 600px;
+
+    &--title {
+        padding-top: 30px;
+    }
+
+    &--apts {
+        justify-content: space-between;
+    }
+}

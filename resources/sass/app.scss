@@ -1,0 +1,38 @@
+// // Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Commons
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/common';
+@import 'partials/utilities';
+
+// Components
+@import 'partials/components/header';
+@import 'partials/components/footer';
+@import 'partials/components/card-apt';
+@import 'partials/components/input-file';
+@import 'partials/components/search-bar';
+
+// Pages Guest
+@import 'partials/pages/guests/home';
+@import 'partials/pages/guests/show';
+@import 'partials/pages/guests/search-page.scss';
+
+// Auth
+@import 'partials/pages/auth/auth.scss';
+
+
+// Pages User
+@import 'partials/pages/users/index';
+@import 'partials/pages/users/messages';
+@import 'partials/pages/users/create';
+@import 'partials/pages/users/edit';
+@import 'partials/pages/users/statistics';
+@import 'partials/pages/users/sponsorship';
+
+// Errors Page
+@import 'partials/errors/page-404';

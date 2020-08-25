@@ -1,0 +1,145 @@
+.pack {
+    height: 700px;
+    position: relative;
+
+    @include responsive($tablet) {
+        height: calc(100vh - 69px);
+    }
+
+    &-cards {
+        height: 100%;
+        padding: 20px 0;
+        @include flex(row, center, center);
+        flex-wrap: wrap;
+        background-color: rgb(83, 86, 94);
+        transition: background-color .6s ease-in-out;
+        
+
+        &--title {
+            position: absolute;
+            top: 18%;
+            left: 50%;
+            transform: translateX(-50%);
+
+
+            h2 {
+                font-size: 2rem;
+                color: rgba(62, 68, 82, 0.22);
+                cursor: default;
+
+                @include responsive($tablet) {
+                    font-size: 8rem;
+                }
+
+                @include responsive($desktop) {
+                    font-size: 12rem;
+                }
+            }
+        }
+        
+        &--single {
+            position: relative;
+            width: 300px;
+            height: 170px;
+            margin: 20px;
+            border-radius: 13px;
+            background-image: url(/images/logo-cut-big.png);
+            background-position: bottom;
+            background-size: 350px;
+            background-repeat: no-repeat;
+            background-blend-mode: luminosity;
+            filter: drop-shadow(0px 3px 3px $shadow);
+            cursor: pointer;
+            
+            &--id {
+                display: none // jQuery
+            }
+            &--price {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
+            &--duration {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 2rem;
+                font-weight: 300;
+            }
+            
+            &--btn {
+                position: absolute;
+                bottom: -45%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }      
+    }
+}
+
+.slogan {
+    background: #34363c;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+
+.pk {
+
+    &-1:hover,
+    &-2:hover,
+    &-3:hover {
+
+        transform: scale(1.03);
+    }
+
+    &-1 {
+        color: $light;
+        background-color: $dark-accent;
+    }
+    
+    &-2 {
+        color: $light;
+        background-color: $light-accent;
+    }
+    
+    &-3 {
+        color: $dark;
+        background-color: #f1a419;
+    }
+}
+
+
+.choice-payment {
+    @include flex(column, flex-start, center);
+    padding-bottom: 50px;
+
+    .choice {
+        display: none; // jQuery
+        margin: 50px 0;
+        text-align: center;
+        
+        p {
+            margin: 15px 0;
+        }
+    }
+    
+    
+    .payment {
+        display: none; // jQuery
+        &--form {
+            max-width: 400px;
+    
+        }
+    }
+}
+
+.braintree-heading {
+    display: none;
+}
+
+

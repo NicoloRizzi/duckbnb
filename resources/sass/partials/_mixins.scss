@@ -1,0 +1,37 @@
+// Mixins
+
+@mixin responsive ($width: $desktop) {
+    @media (min-width: $width) {
+        @content;
+    }
+}
+
+@mixin flex($dir: row, $just: flex-start, $align: flex-start) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $just;
+    align-items: $align;
+}
+
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin reset-a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+@mixin button($color) {
+    color: $color;
+    border: 1px solid $color;
+    padding: 7px 20px;
+    border-radius: 4px;
+    background-color: transparent;
+}
