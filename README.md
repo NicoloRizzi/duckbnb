@@ -43,4 +43,4 @@ DuckBNB contributors:
 [Benoit Gaudieri](https://github.com/BenoitGaudieri) | [Matteo Leuterio](https://github.com/MattLeuterio) | [Nicolò Rizzi](https://github.com/NicoloRizzi) | [Francesco Scarnera](https://github.com/Francesco-Scarnera) | [Luigi Smilzo](https://github.com/luigi-smilzo)
 
 ## Contact me
-Do you like what you see? Say hello: https://github.com/luigi-smilzo
+Do you like what you see? Say hello: https://github.com/NicoloRizzi
